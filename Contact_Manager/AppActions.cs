@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+
 using System.Xml.Serialization;
 
-//using System.Text.Json;
-//using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Encodings.Web;
 
 namespace ContactManager
 {
@@ -34,11 +35,11 @@ namespace ContactManager
             contact.DateOfBirth.YearBirth = Convert.ToUInt16(Program.dsp.RequestUser("Год рождения (int): "));
             contact.DateOfBirth.MonthBirth = Convert.ToUInt32(Program.dsp.RequestUser("Месяц рождения (int): "));
             contact.DateOfBirth.DayBirth = Convert.ToUInt32(Program.dsp.RequestUser("День рождения (int): "));
-            
+
             contact.PhoneNumbers = new PhoneNumbers();
             contact.PhoneNumbers.Mobile = Program.dsp.RequestUser("Мобилный номер: ");
             contact.PhoneNumbers.Work = Program.dsp.RequestUser("Рабочий номер: ");
-            
+
             contact.Email = new Email();
             contact.Email.Work = Program.dsp.RequestUser("email: ");
 
@@ -61,7 +62,7 @@ namespace ContactManager
                     {
                         successful_id = false;
                         candidateID++;
-                        break;   
+                        break;
                     }
                 }
             } while (successful_id != true);
@@ -89,10 +90,10 @@ namespace ContactManager
                     e_contact.DateOfBirth.YearBirth = Convert.ToUInt32(Program.dsp.RequestUser("Год рождения (int): " + e_contact.DateOfBirth.YearBirth + ">> "));
                     e_contact.DateOfBirth.MonthBirth = Convert.ToUInt32(Program.dsp.RequestUser("Месяц рождения (int): " + e_contact.DateOfBirth.MonthBirth + ">> "));
                     e_contact.DateOfBirth.DayBirth = Convert.ToUInt32(Program.dsp.RequestUser("День рождения (int): " + e_contact.DateOfBirth.DayBirth + ">> "));
-                    
+
                     e_contact.PhoneNumbers.Mobile = Program.dsp.RequestUser("Мобилный номер: " + e_contact.PhoneNumbers.Mobile + ">> ");
                     e_contact.PhoneNumbers.Work = Program.dsp.RequestUser("Рабочий номер: " + e_contact.PhoneNumbers.Work + ">> ");
-                    
+
                     e_contact.Email.Work = Program.dsp.RequestUser("email: " + e_contact.Email.Work + ">> ");
 
                     e_contact.City = Program.dsp.RequestUser("Город: " + e_contact.City + ">> ");

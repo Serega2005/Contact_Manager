@@ -6,10 +6,10 @@ namespace ContactManager
     [Serializable]
     public class Contact
     {
-        public uint ContactID { get; set; } 
-        public string Surname { get; set; }  
+        public uint ContactID { get; set; }
+        public string Surname { get; set; }
         public string Name { get; set; }
-        public string Patronymic { get; set; } 
+        public string Patronymic { get; set; }
         public DateOfBirth DateOfBirth { get; set; }
         public PhoneNumbers PhoneNumbers { get; set; }
         public Email Email { get; set; }

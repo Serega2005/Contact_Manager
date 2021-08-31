@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 using static System.Console;
 
+using System.Text.Json;
 namespace ContactManager
-{    
+{
     public class Program
     {
         public static AppActions app = new AppActions();
@@ -40,7 +41,7 @@ namespace ContactManager
                         break;
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4://Удаление контакта
-                        app.DeleteContact(); 
+                        app.DeleteContact();
                         break;
                     case ConsoleKey.D5:
                     case ConsoleKey.NumPad5://Перемешение данных в указанный файл

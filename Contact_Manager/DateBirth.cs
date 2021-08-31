@@ -6,11 +6,11 @@ namespace ContactManager
     [Serializable]
     public class DateOfBirth
     {
-        public uint YearBirth { get; set; } 
-        public uint MonthBirth { get; set; } 
-        public uint DayBirth { get; set; } 
-        public DateOfBirth(){}
-        ~DateOfBirth(){}
+        public uint YearBirth { get; set; }
+        public uint MonthBirth { get; set; }
+        public uint DayBirth { get; set; }
+        public DateOfBirth() { }
+        ~DateOfBirth() { }
         public DateOfBirth(uint year, uint month, uint day)
         {
             YearBirth = year;
